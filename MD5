@@ -1,0 +1,15 @@
+1f468f4fe89cff2c12f43195e1e78132 *DESCRIPTION
+eaa54f0aa4f4721da9ba0c3e3a448628 *NAMESPACE
+63428fccff5417b51ed1c23d2b8b5033 *R/asc2s.r
+5a82006f69afde7cb31e6f6dfe7ed810 *R/fdc2s.r
+e52018427c2bdaa1325fe0efb8d3af56 *R/fds2s.r
+e0a19b772073cd091432126e963c3346 *R/isc2s.r
+2d36c285c5f0c41b4cefe226c6bfebca *man/SECP-package.Rd
+ad80a1aa6d050603e9c0a44301ad8b5d *man/asc2s.Rd
+4ec2a746b5ccfb973aa8ade143a8d7f7 *man/asc3s.Rd
+60081cff33cbc34d21cec0e147e45a8a *man/fdc2s.Rd
+86fcc13e0b5edd561f752bcc1a83fc88 *man/fdc3s.Rd
+43e284112d6f8dd6edc1b320b7d99e42 *man/fds2s.Rd
+b90a3efecbde6d8e5809f6574cf224b0 *man/fds3s.Rd
+cb63a674891e2fcf2e9687730f5f47b4 *man/isc2s.Rd
+6585650674c468cbcddecb0457bb2255 *man/isc3s.Rd
