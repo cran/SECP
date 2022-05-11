@@ -22,13 +22,13 @@ The isotropic set cover on 2D square lattice is formed from scalable squares wit
 The anisotropic set cover on 2D square lattice is formed from scalable rectangles with variable sizes \code{r+1} and a fixed edge along the lattice boundary.
 
 The percolation is simulated on 2D square lattice with uniformly weighted sites and the constant parameter \code{p}.
- 
+
 The isotropic cluster is formed from the accessible sites connected with initial sites subset.
 
 If \code{acc[e]<p} then \code{e} is accessible site; if \code{acc[e]==1} then \code{e} is non-accessible site; if \code{acc[e]==2} then \code{e} belong to a sites cluster.
 }
 \seealso{
-\link{fdc3s}, 
+\link{fdc3s},
 \link{fds2s}, \link{fds3s}
 }
 \concept{square lattice}
@@ -39,9 +39,7 @@ If \code{acc[e]<p} then \code{e} is accessible site; if \code{acc[e]==1} then \c
 \concept{mass fractal dimension}
 \author{Pavel V. Moskalev}
 \references{
-Moskalev, P.V., Grebennikov, K.V. and Shitov, V.V. (2011),
-Statistical estimation of percolation cluster parameters.
-\emph{Proceedings of Voronezh State University. Series: Systems Analysis and Information Technologies}, No.1 (January-June), pp.29-35; arXiv:1105.2334v1 [cond-mat.stat-mech]; in Russian.
+Moskalev P.V., Grebennikov K.V. and Shitov V.V. (2011) Statistical estimation of percolation cluster parameters. \emph{Proceedings of Voronezh State University. Series: Systems Analysis and Information Technologies}, No.1 (January-June), pp.29-35, arXiv:1105.2334v1; in Russian.
 }
 \examples{
 # # # # # # # # # # # # # # # # #
@@ -78,16 +76,17 @@ image(x, y, ac2, cex.main=1,
 rect(bnd["x1",], bnd["y1",], bnd["x2",], bnd["y2",])
 abline(h=ss, lty=2); abline(v=ss, lty=2)
 plot(r1, n1, pch=3, ylim=range(c(n1,n2)), cex.main=1,
-     main=paste("0.95 confidence interval for the mass\n", 
+     main=paste("0.95 confidence interval for the mass\n",
                 "fractal dimension is (",s1,")", sep=""))
 matlines(rr, nn1, lty=c(1,2,2), col=c("black","red","red"))
 plot(r2, n2, pch=3, ylim=range(c(n1,n2)), cex.main=1,
-     main=paste("0.95 confidence interval for the mass\n", 
+     main=paste("0.95 confidence interval for the mass\n",
                 "fractal dimension is (",s2,")", sep=""))
 matlines(rr, nn2, lty=c(1,2,2), col=c("black","red","red"))
 
+\dontrun{
 # # # # # # # # # # # # # # # # #
-# Example 1: Anisotropic set cover, dir=2
+# Example 2: Anisotropic set cover, dir=2
 # # # # # # # # # # # # # # # # #
 pc <- .592746
 p1 <- pc - .03
@@ -120,11 +119,12 @@ image(x, y, ac2, cex.main=1,
 rect(bnd["x1",], bnd["y1",], bnd["x2",], bnd["y2",])
 abline(v=ss, lty=2)
 plot(r1, n1, pch=3, ylim=range(c(n1,n2)), cex.main=1,
-     main=paste("0.95 confidence interval for the mass\n", 
+     main=paste("0.95 confidence interval for the mass\n",
                 "fractal dimension is (",s1,")", sep=""))
 matlines(rr, nn1, lty=c(1,2,2), col=c("black","red","red"))
 plot(r2, n2, pch=3, ylim=range(c(n1,n2)), cex.main=1,
-     main=paste("0.95 confidence interval for the mass\n", 
+     main=paste("0.95 confidence interval for the mass\n",
                 "fractal dimension is (",s2,")", sep=""))
 matlines(rr, nn2, lty=c(1,2,2), col=c("black","red","red"))
+}
 }

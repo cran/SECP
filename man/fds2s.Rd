@@ -22,13 +22,13 @@ The isotropic set cover on 2D square lattice is formed from scalable squares wit
 The anisotropic set cover on 2D square lattice is formed from scalable rectangles with variable sizes \code{r+1} and a fixed edge along the lattice boundary.
 
 The percolation is simulated on 2D square lattice with uniformly weighted sites and the constant parameter \code{p}.
- 
+
 The isotropic cluster is formed from the accessible sites connected with initial sites subset.
 
 Each element of the matrix \code{rfq} is equal to the relative frequency with which the 2D square lattice site belongs to a cluster sample.
 }
 \seealso{
-\link{fds3s}, 
+\link{fds3s},
 \link{fdc2s}, \link{fdc3s}
 }
 \concept{square lattice}
@@ -39,9 +39,7 @@ Each element of the matrix \code{rfq} is equal to the relative frequency with wh
 \concept{mass fractal dimension}
 \author{Pavel V. Moskalev}
 \references{
-Moskalev, P.V., Grebennikov, K.V. and Shitov, V.V. (2011),
-Statistical estimation of percolation cluster parameters.
-\emph{Proceedings of Voronezh State University. Series: Systems Analysis and Information Technologies}, No.1 (January-June), pp.29-35; arXiv:1105.2334v1 [cond-mat.stat-mech]; in Russian.
+Moskalev P.V., Grebennikov K.V. and Shitov V.V. (2011) Statistical estimation of percolation cluster parameters. \emph{Proceedings of Voronezh State University. Series: Systems Analysis and Information Technologies}, No.1 (January-June), pp.29-35, arXiv:1105.2334v1; in Russian.
 }
 \examples{
 # # # # # # # # # # # # # # # # #
@@ -68,26 +66,27 @@ par(mfrow=c(2,2), mar=c(3,3,3,1), mgp=c(2,1,0))
 image(x, y, rf1, zlim=c(0, .7), cex.main=1,
       main=paste("Isotropic set cover and\n",
                  "a 2D clusters frequency with\n",
-                 "(1,0)-neighborhood and p=", 
+                 "(1,0)-neighborhood and p=",
                  round(p1, digits=3), sep=""))
 rect(bnd["x1",], bnd["y1",], bnd["x2",], bnd["y2",])
 abline(h=ss, lty=2); abline(v=ss, lty=2)
 image(x, y, rf2, zlim=c(0, .7), cex.main=1,
       main=paste("Isotropic set cover and\n",
                  "a 2D clusters frequency with\n",
-                 "(1,0)-neighborhood and p=", 
+                 "(1,0)-neighborhood and p=",
                  round(p2, digits=3), sep=""))
 rect(bnd["x1",], bnd["y1",], bnd["x2",], bnd["y2",])
 abline(h=ss, lty=2); abline(v=ss, lty=2)
 plot(r1, w1, pch=3, ylim=range(c(w1,w2)), cex.main=1,
-     main=paste("0.95 confidence interval for the mass\n", 
+     main=paste("0.95 confidence interval for the mass\n",
                 "fractal dimension is (",s1,")", sep=""))
 matlines(rr, ww1, lty=c(1,2,2), col=c("black","red","red"))
 plot(r2, w2, pch=3, ylim=range(c(w1,w2)), cex.main=1,
-     main=paste("0.95 confidence interval for the mass\n", 
+     main=paste("0.95 confidence interval for the mass\n",
                 "fractal dimension is (",s2,")", sep=""))
 matlines(rr, ww2, lty=c(1,2,2), col=c("black","red","red"))
 
+\dontrun{
 # # # # # # # # # # # # # # # # # #
 # Example 2: Anisotropic set cover, dir=2
 # # # # # # # # # # # # # # # # # #
@@ -113,23 +112,24 @@ par(mfrow=c(2,2), mar=c(3,3,3,1), mgp=c(2,1,0))
 image(x, y, rf1, zlim=c(0, .7), cex.main=1,
       main=paste("Anisotropic set cover and\n",
                  "a 2D clusters frequency with\n",
-                 "(1,0)-neighborhood and p=", 
+                 "(1,0)-neighborhood and p=",
                  round(p1, digits=3), sep=""))
 rect(bnd["x1",], bnd["y1",], bnd["x2",], bnd["y2",])
 abline(v=ss, lty=2)
 image(x, y, rf2, zlim=c(0, .7), cex.main=1,
       main=paste("Anisotropic set cover and\n",
                  "a 2D clusters frequency with\n",
-                 "(1,0)-neighborhood and p=", 
+                 "(1,0)-neighborhood and p=",
                  round(p2, digits=3), sep=""))
 rect(bnd["x1",], bnd["y1",], bnd["x2",], bnd["y2",])
 abline(v=ss, lty=2)
 plot(r1, w1, pch=3, ylim=range(c(w1,w2)), cex.main=1,
-     main=paste("0.95 confidence interval for the mass\n", 
+     main=paste("0.95 confidence interval for the mass\n",
                 "fractal dimension is (",s1,")", sep=""))
 matlines(rr, ww1, lty=c(1,2,2), col=c("black","red","red"))
 plot(r2, w2, pch=3, ylim=range(c(w1,w2)), cex.main=1,
-     main=paste("0.95 confidence interval for the mass\n", 
+     main=paste("0.95 confidence interval for the mass\n",
                 "fractal dimension is (",s2,")", sep=""))
 matlines(rr, ww2, lty=c(1,2,2), col=c("black","red","red"))
+}
 }

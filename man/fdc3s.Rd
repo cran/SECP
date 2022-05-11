@@ -22,13 +22,13 @@ The isotropic set cover on 3D square lattice is formed from scalable cubes with 
 The anisotropic set cover on 3D square lattice is formed from scalable cuboids with variable sizes \code{r+1} and a fixed face along the lattice boundary.
 
 The percolation is simulated on 3D square lattice with uniformly weighted sites and the constant parameter \code{p}.
- 
+
 The isotropic cluster is formed from the accessible sites connected with initial sites subset.
 
 If \code{acc[e]<p} then \code{e} is accessible site; if \code{acc[e]==1} then \code{e} is non-accessible site; if \code{acc[e]==2} then \code{e} belong to a sites cluster.
 }
 \seealso{
-\link{fdc2s}, 
+\link{fdc2s},
 \link{fds2s}, \link{fds3s}
 }
 \concept{square lattice}
@@ -64,26 +64,27 @@ par(mfrow=c(2,2), mar=c(3,3,3,1), mgp=c(2,1,0))
 image(x, z, y1, cex.main=1,
       main=paste("Isotropic set cover and\n",
                  "a 3D cluster in the y=",ss," slice with\n",
-                 "(1,0)-neighborhood and p=", 
+                 "(1,0)-neighborhood and p=",
                  round(p1, digits=3), sep=""))
 rect(bnd["x1",], bnd["z1",], bnd["x2",], bnd["z2",])
 abline(h=ss, lty=2); abline(v=ss, lty=2)
 image(x, z, y2, cex.main=1,
       main=paste("Isotropic set cover and\n",
                  "a 3D cluster in the y=",ss," slice with\n",
-                 "(1,0)-neighborhood and p=", 
+                 "(1,0)-neighborhood and p=",
                  round(p2, digits=3), sep=""))
 rect(bnd["x1",], bnd["z1",], bnd["x2",], bnd["z2",])
 abline(h=ss, lty=2); abline(v=ss, lty=2)
 plot(r1, n1, pch=3, ylim=range(c(n1,n2)), cex.main=1,
-     main=paste("0.95 confidence interval for the mass\n", 
+     main=paste("0.95 confidence interval for the mass\n",
                 "fractal dimension is (",s1,")", sep=""))
 matlines(rr, nn1, lty=c(1,2,2), col=c("black","red","red"))
 plot(r2, n2, pch=3, ylim=range(c(n1,n2)), cex.main=1,
-     main=paste("0.95 confidence interval for the mass\n", 
+     main=paste("0.95 confidence interval for the mass\n",
                 "fractal dimension is (",s2,")", sep=""))
 matlines(rr, nn2, lty=c(1,2,2), col=c("black","red","red"))
 
+\dontrun{
 # # # # # # # # # # # # # # # # #
 # Example 1: Anisotropic set cover, dir=3
 # # # # # # # # # # # # # # # # #
@@ -110,23 +111,24 @@ par(mfrow=c(2,2), mar=c(3,3,3,1), mgp=c(2,1,0))
 image(x, z, y1, cex.main=1,
       main=paste("Anisotropic set cover and\n",
                  "a 3D cluster in the y=",ss," slice with\n",
-                 "(1,0)-neighborhood and p=", 
+                 "(1,0)-neighborhood and p=",
                  round(p1, digits=3), sep=""))
 rect(bnd["x1",], bnd["z1",], bnd["x2",], bnd["z2",])
 abline(v=ss, lty=2)
 image(x, z, y2, cex.main=1,
       main=paste("Anisotropic set cover and\n",
                  "a 3D cluster in the y=",ss," slice with\n",
-                 "(1,0)-neighborhood and p=", 
+                 "(1,0)-neighborhood and p=",
                  round(p2, digits=3), sep=""))
 rect(bnd["x1",], bnd["z1",], bnd["x2",], bnd["z2",])
 abline(v=ss, lty=2)
 plot(r1, n1, pch=3, ylim=range(c(n1,n2)), cex.main=1,
-     main=paste("0.95 confidence interval for the mass\n", 
+     main=paste("0.95 confidence interval for the mass\n",
                 "fractal dimension is (",s1,")", sep=""))
 matlines(rr, nn1, lty=c(1,2,2), col=c("black","red","red"))
 plot(r2, n2, pch=3, ylim=range(c(n1,n2)), cex.main=1,
-     main=paste("0.95 confidence interval for the mass\n", 
+     main=paste("0.95 confidence interval for the mass\n",
                 "fractal dimension is (",s2,")", sep=""))
 matlines(rr, nn2, lty=c(1,2,2), col=c("black","red","red"))
+}
 }

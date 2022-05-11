@@ -18,7 +18,7 @@ A list of boundary coordinates and sizes for the isotropic set cover on a 2D squ
 }
 \details{
 The percolation is simulated on 2D square lattice with uniformly weighted sites and the constant parameter \code{p}.
- 
+
 The percolation cluster is formed from the accessible sites connected with initial sites subset.
 
 If an initial cluster subset in the lattice center, to estimate the mass fractal dimension requires an isotropic set cover with a fixed point in the lattice center.
@@ -26,7 +26,7 @@ If an initial cluster subset in the lattice center, to estimate the mass fractal
 The isotropic set cover on 2D square lattice is formed from scalable squares with variable sizes \code{2r+1} and a fixed point in the lattice center.
 }
 \seealso{
-\link{fdc3s}, 
+\link{fdc3s},
 \link{fds2s}, \link{fds3s}
 }
 \concept{square lattice}
@@ -38,7 +38,7 @@ The isotropic set cover on 2D square lattice is formed from scalable squares wit
 \references{
 Moskalev, P.V., Grebennikov, K.V. and Shitov, V.V. (2011),
 Statistical estimation of percolation cluster parameters.
-\emph{Proceedings of Voronezh State University. Series: Systems Analysis and Information Technologies}, No.1 (January-June), pp.29-35; arXiv:1105.2334v1 [cond-mat.stat-mech]; in Russian.
+\emph{Proceedings of Voronezh State University. Series: Systems Analysis and Information Technologies}, No.1 (January-June), pp.29-35, arXiv:1105.2334v1; in Russian.
 }
 \examples{
 # # # # # # # # # # # # # # # # #
